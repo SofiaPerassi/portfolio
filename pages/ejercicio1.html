@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div id="Trivia"></div>
+    <script>
+      var preguntas=[
+       { 
+         prompt: "De qué serie es el personaje Ned Stark?\n(a) Game of thrones\n(b) Breaking bad\n(c) Stranger things",
+         answer: "a"
+       },
+       { 
+         prompt: "Cuantos hijos tiene Ned Stark?\n(a) 6\n(b) 5\n(c) 4",
+         answer: "b"
+       },
+       { 
+         prompt: "Cuantos huevos de dragon tiene Daenerys?\n(a) 3\n(b) 2\n(c) Ninguno",
+         answer: "a"
+       },
+       { 
+         prompt: "Cuantos lobos huargos encuentran los Stark?\n(a) 3\n(b) 5\n(c) 6",
+         answer: "c"
+       },
+       { 
+         prompt: "Como se llama el hijo bastardo de Ned Stark?\n(a) Rob\n(b) Rickon\n(c) Jon",
+         answer: "c"
+       },
+      ]
+      var resultados=0;
+      for(var i=0; i<preguntas.length; i++){ 
+       var response=window.prompt(preguntas[i].prompt);
+       if(response ==preguntas[i].answer){
+         resultados++;
+       }
+       alert("Tuviste " + resultados + " preguntas correctas");
+       }
+    </script>
+</body>
+</html>
